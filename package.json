@@ -1,0 +1,32 @@
+{
+  "name": "yleasunnotv1",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://infograafikko.github.io/yle-vuokra-asunnot",
+  "dependencies": {
+    "d3-fetch": "^1.0.1",
+    "gh-pages": "^1.1.0",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.1.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-rangeslider": "^2.2.0",
+    "react-scripts": "1.1.1",
+    "run": "^1.4.0",
+    "semantic-ui-css": "^2.3.0",
+    "semantic-ui-react": "^0.78.2",
+    "semiotic": "^1.7.13"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

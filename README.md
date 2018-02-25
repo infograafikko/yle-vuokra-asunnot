@@ -1,0 +1,1 @@
+Vuokra-asunnot vertailussa datavisualisointiartikkeli. Aineiston lähden Yle.
